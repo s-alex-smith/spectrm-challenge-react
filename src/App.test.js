@@ -12,7 +12,7 @@ test('renders app', () => {
 });
 
 describe('Axios', () => {
-  const mockData = { title: "title" }
+  const mockData = { title: "Gender", totalLabel: 100, data: [{ value: 40, label: "Women"}, {value: 50, label: "men"}] }
   jest.fn()
 
   beforeEach(() => {

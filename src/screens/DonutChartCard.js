@@ -2,6 +2,7 @@ import React, {} from 'react';
 import styled from 'styled-components/macro';
 import Clone from './Clone';
 import DonutChartData from './DonutChartData';
+import { func, number, object} from 'prop-types';
 
 const StyledTitle = styled.p`
     border-bottom: 0.2em dotted grey;
@@ -42,5 +43,17 @@ const DonutChartCard = ( { profile, clickClone, index } ) => {
         </StyledCard>
     );
 }
+
+DonutChartCard.propTypes = {
+    clickClone: func,
+    index: number,
+    profile: object
+    }
+    
+DonutChartCard.defaultPtops = {
+      clickClone: () => {},
+      index: 0,
+      profile: {}
+    }
 
 export default DonutChartCard;

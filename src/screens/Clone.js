@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components/macro';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEllipsisV } from '@fortawesome/free-solid-svg-icons'
+import { func, number} from 'prop-types';
 
 const StyledCloneButton = styled.button`
     background-color: white;
@@ -46,5 +47,15 @@ const Clone = ({clickClone, index}) => {
 
     );
 }
+
+Clone.propTypes = {
+    clickClone: func,
+    index: number
+    }
+    
+Clone.defaultPtops = {
+      clickClone: () => {},
+      index: 0,
+    }
 
 export default Clone;

@@ -1,5 +1,6 @@
 import React from 'react';
 import Chart from "react-apexcharts";
+import {string, array, number} from 'prop-types';
 
 const DonutChartData = ( { totalLabel, series, labels } ) => {
     const chartOptions = {
@@ -51,6 +52,18 @@ const DonutChartData = ( { totalLabel, series, labels } ) => {
       />
       </>
     )
+}
+
+DonutChartData.propTypes = {
+totalLabel: string,
+series: number,
+labels: array 
+}
+
+DonutChartData.defaultPtops = {
+  totalLabel: "",
+  series: 0,
+  labels: []
 }
 
 export default DonutChartData
